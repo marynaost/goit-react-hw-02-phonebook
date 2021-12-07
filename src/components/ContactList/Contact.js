@@ -1,10 +1,15 @@
 import PropTypes from 'prop-types';
+import s from './ContactList.module.scss';
 const Contact = ({ contact, onDeleteContact }) => (
   <>
     <span>
       {contact.name}: {contact.number}
     </span>
-    <button type="button" onClick={() => onDeleteContact(contact.id)}>
+    <button
+      className={s.button}
+      type="button"
+      onClick={() => onDeleteContact(contact.id)}
+    >
       Delete
     </button>
   </>

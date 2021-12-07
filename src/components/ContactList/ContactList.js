@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
+import s from './ContactList.module.scss';
 import Contact from './Contact';
 
 function ContactList({ contacts, onDeleteContact }) {
   return contacts.length === 0 ? (
-    <div>You haven't contacts!</div>
+    <div className={s.noContacts}>You haven't contacts!</div>
   ) : (
-    <ul>
+    <ul className={s.item}>
       {contacts.map(contact => (
-        <li key={contact.id}>
+        <li className={s.list} key={contact.id}>
           <Contact contact={contact} onDeleteContact={onDeleteContact} />
         </li>
       ))}
