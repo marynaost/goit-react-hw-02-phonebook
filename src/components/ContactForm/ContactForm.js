@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 import s from './ContactForm.module.scss';
 
 export class ContactForm extends Component {
+  static propTypes = {
+    onSubmit: PropTypes.func,
+  };
+
   state = {
     name: '',
     number: '',
-  };
-
-  static propTypes = {
-    name: PropTypes.string,
-    number: PropTypes.string,
   };
 
   nameInputId = shortid.generate();

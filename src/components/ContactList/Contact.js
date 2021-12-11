@@ -17,7 +17,6 @@ const Contact = ({ contact, onDeleteContact }) => (
 
 Contact.propTypes = {
   contact: PropTypes.shape({
-    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
   }).isRequired,
